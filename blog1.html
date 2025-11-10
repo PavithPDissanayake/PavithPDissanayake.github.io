@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="blog1.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+    <a href="index.html" class="logo">Pavith Dissanayake</a>
+    <div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<nav id="hamburger-nav">
+    <div class="logo">Pavith Dissanayake</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+    </div>
+</nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/landslide 2.png" alt="Landslide profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Application of the YOLOv11-seg Algorithm for </p>
+            <h1 class="title">AI-Based Landslide Detection and Hazard Recognition</h1>
+            <p class="section__text__p2">in Vulnerable Areas of Sri Lanka’s Central Highlands</p>
+            <p class="published-date">Published: 2025/08/17</p>
+            <div id="socials-container">
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/PavithPDissanayake'">
+            </div>
+        </div>
+    </section>
+     <section id="about">
+        <p class="section__text__p1">Get To Know </p>
+        <h1 class="title">About The Project</h1>
+                <div class="text-container">
+                    <p>Natural disasters, particularly landslides, represent a critical and escalating global threat to human safety and civil infrastructure. 
+                        Events like the devastating 2014 Argo landslide in Afghanistan, which resulted in over 2,000 fatalities, vividly illustrate the catastrophic scale of these geological hazards. 
+                        The rapidly increasing frequency and intensity of such incidents worldwide underscore an urgent need for revolutionary advancements in geological disaster monitoring. 
+                        Traditional detection methods are often insufficient to meet the challenges posed by complex, dynamic terrains and the diverse morphological signatures of landslide events.
+                        </p>
+                    <p><br />This need is exceptionally acute in regions characterized by high topographical fragility and intensive seasonal rainfall, such as the Central Highlands of Sri Lanka. 
+                        <b>Alarmingly, nearly 20% of the island's total land area, encompassing ten administrative districts including Badulla, Kandy, and Nuwara Eliya, is categorized as landslide-prone, directly exposing approximately 30% of the country’s population to significant risk.</b>
+                        Torrential monsoon and inter-monsoon rains are the principal triggers for catastrophic slope failures. 
+                        Recent history is marked by major, tragic incidents, including the rapid and long-traveling Aranayaka landslide in the Kegalle District in May 2016, which claimed 127 lives, and the widespread destruction during the May 2017 floods and landslides, which caused over 212 deaths and affected 717,622 people. 
+                        Preventing future humanitarian and economic losses in this highly vulnerable region depends critically on a major technological advancement in early warning and risk assessment.</p>
+                </div>
+                 <div class="about-images-row">
+            <img src="./assets/aranayake.jpg" alt="landslide content image 1">
+                 </div>
+                 <div class="about-images-row">
+            <img src="./assets/Aranayaka-Landslide.jpg" alt="landslide content image 2">
+                 </div>
+                 <div class="about-images-row">
+            <img src="./assets/aranayake2.jpg" alt="landslide content image 2">
+                 </div>
+                 <div class="about-images-row">
+            <img src="./assets/aranayake3.png" alt="landslide content image 2">
+                 </div>
+                 <div class="text-container">
+                    <p>To address this pronounced challenge, this study introduces an advanced intelligent recognition framework for landslides based on the cutting-edge deep learning architecture, YOLOv11-seg. 
+                        This novel approach is specifically tailored to handle the spatial nuances and complex characteristics of tropical landslides in real-world scenarios. 
+                        <b>The model’s development followed a rigorous two-stage training strategy: first, leveraging the comprehensive Bijie-Landslide dataset for foundational training and robust feature learning. 
+                        Subsequently, the architecture was fine-tuned using localized data specifically representing the unique geo-environmental characteristics and diverse morphological signatures of Sri Lanka's challenging terrains.</b>
+                        </p>
+                    <p><br />This methodology involved meticulous optimization of the YOLOv11-seg's feature extraction and segmentation modules, 
+                        designed to achieve superior performance in both accurately defining landslide boundaries (bounding box detection) and providing granular, pixel-level area segmentation (mask generation).
+                         Furthermore, robust data augmentation techniques—including mirroring, rotation, and color adjustments—were employed during preprocessing to significantly bolster the model's generalization capacity and ensure reliable detection across variable lighting, seasons, and terrain conditions. </p>
+                </div>
+                <p class="published-date1">to be continued...</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                 <li><a href="index.html#about">About</a></li>
+                 <li><a href="index.html#experience">Experience</a></li>
+                 <li><a href="index.html#projects">Projects</a></li>
+                 <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+        <p>By Pavith Pramodya Dissanayake&nbsp;&nbsp;&nbsp;~All Rights Reserved~ <span id="local-time"></span>Colombo &#169; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
