@@ -5,18 +5,20 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-function updateLocalTime() {
+function updateColomboTime() {
+    const options = {
+      timeZone: 'Asia/Colombo',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    };
     const now = new Date();
-    const timeZoneOffsetMinutes = 330;
-    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-    const localTimeInMilliseconds = utc + (timeZoneOffsetMinutes * 60000);
-    const localTime = new Date(localTimeInMilliseconds);
-    const hours = localTime.getHours().toString().padStart(2, '0');
-    const minutes = localTime.getMinutes().toString().padStart(2, '0');
-    const seconds = localTime.getSeconds().toString().padStart(2, '0');
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('local-time').textContent = ` (Time: ${timeString})`;
-    }
+    document.getElementById('local-time').textContent =
+      now.toLocaleTimeString('en-US', options) + ' ';
+  }
+  updateColomboTime();
+  setInterval(updateColomboTime, 1000);
 
 updateLocalTime();
 
