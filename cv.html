@@ -40,7 +40,8 @@
             font-size: 1.125rem; /* text-lg */
             margin-top: 0.5rem;
         }
-    </style>
+
+       </style>
 </head>
 <body class="bg-white text-black p-8 md:p-16">
 
@@ -51,7 +52,19 @@
             <!-- Title -->
             <div>
                 <h1 class="text-4xl md:text-6xl font-bold text-neon">PAVITH DISSANAYAKE</h1>
+                <div class="flex items-center gap-4">
                 <p class="text-2xl md:text-3xl">Curriculum Vitae</p>
+                <!-- Contact Details Button -->
+             <button
+                onclick="scrollToContact()"
+                class="hover:shadow-lg transition-all duration-300 flex items-center"
+                style="background: none; padding: 0;"
+                aria-label="Contact Details"
+                 >
+                 <img src="./assets/contact cv icon.png" alt="Contact Details" class="h-6 md:h-6 w-auto" />
+                </button>
+
+            </div>
             </div>
             <!-- Button Group -->
             <div class="flex items-center flex-shrink-0 gap-4">
@@ -266,12 +279,15 @@
             </section>
            
             <!-- Contact -->
+        <section id="contact">
+            <!-- Contact -->
             <section>
                 <h2 class="text-2xl md:text-3xl font-bold text-neon mb-4 border-b border-black/50 pb-2">Contact</h2>
                 <div class="space-y-4">
                    <div>
                     <ul class="mt-4 space-y-2">
-  <!-- Mobile Phone (classic icon, black) -->
+  
+                        <!-- Mobile Phone (classic icon, black) -->
   <li class="flex items-center gap-2">
     <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <rect x="7" y="2" width="10" height="20" rx="2"/>
@@ -287,6 +303,15 @@
       <path d="M22 6l-10 7L2 6"/>
     </svg>
     <a href="mailto:pavithdissanayake@gmail.co" class="underline hover:text-neon">pavithdissanayake@gmail.com</a>
+  </li>
+  
+  <!-- Email -->
+  <li class="flex items-center gap-2">
+    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <rect width="20" height="16" x="2" y="4" rx="2"/>
+      <path d="M22 6l-10 7L2 6"/>
+    </svg>
+    <a href="mailto:pavithpd@outlook.co" class="underline hover:text-neon">pavithpd@outlook.com</a>
   </li>
 
   <!-- Portfolio Website with globe icon -->
@@ -324,12 +349,30 @@
     <a href="http://www.linkedin.com/in/pavith-dissanayake-354120203" target="_blank" rel="noopener" class="underline hover:text-neon">linkedin.com/in/pavith-dissanayake-354120203</a>
   </li>
 
+  <!-- WeChat -->
+  <li class="flex items-center gap-2">
+    <!-- WeChat icon (green SVG with speech bubbles) -->
+    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+      <g>
+        <ellipse cx="8" cy="12" rx="7" ry="6" fill="#7bb32e"/>
+        <ellipse cx="17" cy="10" rx="5" ry="4" fill="#7bb32e"/>
+        <circle cx="6.5" cy="12" r="1" fill="#fff"/>
+        <circle cx="9.5" cy="12" r="1" fill="#fff"/>
+        <circle cx="16" cy="10.5" r="0.7" fill="#fff"/>
+        <circle cx="18" cy="10.5" r="0.7" fill="#fff"/>
+      </g>
+    </svg>
+     <a href="weixin://dl/adduser?wxid_aa5pkvpudilm22" class="underline hover:text-neon">WeChat: wxid_aa5pkvpudilm22</a>
+  <span class="text-xs text-gray-500">(Tap on mobile with WeChat, or copy ID)</span>
+  </li>
+
   <!-- Nationality -->
   <li class="flex items-center gap-2">
     <span class="text-2xl">🇱🇰</span>
     <span>Sri Lanka</span>
   </li>
 </ul>
+</section>
 
         </div>
             </section>
@@ -361,6 +404,14 @@
   setInterval(updateColomboTime, 1000);
 </script>
 
+<script>
+  function scrollToContact() {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+</script>
 
 </body>
 </html>
